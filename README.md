@@ -1,16 +1,38 @@
-## Hi there 👋
+# Hi, I'm Nick 👋 
+## GitHub Stats 
+![GitHub Stats](./profile/stats.svg)
+<!-- NOT THE MOST FLATTERING GRAPH: [![Commit History](https://github-readme-activity-graph.vercel.app/graph?username=NickMillburn&theme=react)](https://github.com/NickMillburn/github-readme-activity-graph) -->
+## Languages: C (Primary), C++,  Python, Java, SQL, VHDL, Assembly, Typescript
 
-<!--
-**NickMillburn/NickMillburn** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<br/><br/>
+<table width="100%" style="table-layout: fixed;">
+<tr>
+<td width="70%" valign="top">
+  
+## About Me
+I’m a Computer Science & Engineering student at the University of Iowa (since 2023) with a strong interest in systems, embedded development, and hands-on engineering. I grew up tinkering with anything I could get my hands on, which led me from mechanical and robotics interests into computer engineering, where I found my passion in software and hardware integration.
 
-Here are some ideas to get you started:
+In my free time, I run personal servers built from repurposed Dell Optiplex machines running Arch Linux, Windows, and headless Ubuntu setups. After taking Embedded Systems, I also began developing microcontroller projects and designing custom PCBs for IoT applications in everyday life.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+Outside of engineering, I enjoy learning new things and immediately putting them into practice. I’m a dog person (cats are acceptable), enjoy sandbox games like Teardown and Noita, and I’m a big movie fan. Current favorites, in order:
+
+1.Bullet Train (2022)
+
+2.Running Scared (1986)
+
+3.Fantastic Mr. Fox (2009)
+
+4.The Grand Budapest Hotel (2014)
+
+<br/><br/>
+<b>Contact:</b> n340028@gmail.com
+
+</td>
+<td width="30%" valign="top" align="center">
+  <div style="text-align: center;">
+    <img src="./profile/selfie.jpg" width="250"/><br/>
+    <em>That's me!</em>
+  </div>
+</td>
+</tr>
+</table>
