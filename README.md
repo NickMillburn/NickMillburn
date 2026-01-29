@@ -11,7 +11,7 @@ I’m a Computer Science & Engineering student at the University of Iowa (since 
 
 In my free time, I run personal servers built from repurposed Dell Optiplex machines running Arch Linux, Windows, and headless Ubuntu setups. After taking Embedded Systems, I also began developing microcontroller projects and designing custom PCBs for IoT applications in everyday life.
 
-Outside of engineering, I enjoy learning new things and immediately putting them into practice. I’m a dog person (cats are acceptable), enjoy sandbox games like Teardown and Noita, and I’m a big movie fan. Current favorites, in order:
+Outside of engineering, I enjoy learning new things and immediately putting them into practice. I’m a dog person (cats are chill though), enjoy sandbox games like Teardown and Noita, and I’m a big movie fan. Current favorites, in order:
 
 1. Bullet Train (2022)
 
