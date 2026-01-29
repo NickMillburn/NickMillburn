@@ -13,13 +13,13 @@ In my free time, I run personal servers built from repurposed Dell Optiplex mach
 
 Outside of engineering, I enjoy learning new things and immediately putting them into practice. I’m a dog person (cats are acceptable), enjoy sandbox games like Teardown and Noita, and I’m a big movie fan. Current favorites, in order:
 
-1.Bullet Train (2022)
+1. Bullet Train (2022)
 
-2.Running Scared (1986)
+2. Running Scared (1986)
 
-3.Fantastic Mr. Fox (2009)
+3. Fantastic Mr. Fox (2009)
 
-4.The Grand Budapest Hotel (2014)
+4. The Grand Budapest Hotel (2014)
 
 <br/><br/>
 <b>Contact:</b> n340028@gmail.com
