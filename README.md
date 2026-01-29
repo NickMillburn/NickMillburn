@@ -1,7 +1,4 @@
 # Hi, I'm Nick 👋 
-## GitHub Stats 
-![GitHub Stats](./profile/stats.svg)
-<!-- NOT THE MOST FLATTERING GRAPH: [![Commit History](https://github-readme-activity-graph.vercel.app/graph?username=NickMillburn&theme=react)](https://github.com/NickMillburn/github-readme-activity-graph) -->
 ## Languages: C (Primary), C++,  Python, Java, SQL, VHDL, Assembly, Typescript
 
 <br/><br/>
