@@ -8,8 +8,8 @@
         role="img"
         aria-labelledby="descId"
       >
-        <title id="titleId">Scott Bellows' GitHub Stats, Rank: C</title>
-        <desc id="descId">Total Commits  (last year) : 46, Total PRs: 10, Total Issues: 0, Contributed to (last year): 1</desc>
+        <title id="titleId">Nicholas A. Millburn's GitHub Stats, Rank: C</title>
+        <desc id="descId">Total Commits  (last year) : 76, Total PRs: 2, Total Issues: 0, Contributed to (last year): 1</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 232.04382435892668;
+        stroke-dashoffset: 226.3455210957892;
       }
     }
   
@@ -126,7 +126,7 @@
         y="0"
         class="header"
         data-testid="header"
-      >Scott Bellows' GitHub Stats</text>
+      >Nicholas A. Millburn's GitHub Stats</text>
     </g>
       </g>
     
@@ -151,7 +151,7 @@
         x="219.01"
         y="12.5"
         data-testid="commits"
-      >46</text>
+      >76</text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" style="animation-delay: 600ms" transform="translate(25, 0)">
@@ -166,7 +166,7 @@
         x="219.01"
         y="12.5"
         data-testid="prs"
-      >10</text>
+      >2</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
