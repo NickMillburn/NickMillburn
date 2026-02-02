@@ -1,6 +1,6 @@
 # Hi, I'm Nick 👋 
 
-[![Nicks's GitHub stats](https://github-readme-stats.vercel.app/api?username=NickMillburn&card_width=1000&hide_rank=true&hide=stars&show_icons=true&theme=transparent)]
+<!--[![Nicks's GitHub stats](https://github-readme-stats.vercel.app/api?username=NickMillburn&card_width=1000&hide_rank=true&hide=stars&show_icons=true&theme=transparent)]-->
 ## Languages: C (Primary), C++,  Python, Java, SQL, VHDL, Assembly, Typescript
 
 <br/><br/>
