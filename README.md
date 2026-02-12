@@ -29,7 +29,7 @@ Outside of engineering, I enjoy learning new things and immediately putting them
 </td>
 <td width="30%" valign="top" align="center">
   <div style="text-align: center;">
-    <img src="./profile/selfie.jpg" width="250"/><br/>
+    <img src="./profile/profile-slideshow.gif" width="250"/><br/>
     <em>That's me!</em>
   </div>
 </td>
