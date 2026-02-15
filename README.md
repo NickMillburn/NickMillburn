@@ -16,13 +16,18 @@ In my free time, I run personal servers built from repurposed Dell Optiplex mach
 
 Outside of engineering, I enjoy learning new things and immediately putting them into practice. I’m a dog person (cats are chill though), enjoy sandbox games like Teardown and Noita, and I’m a big movie fan. Current favorites, in order:
 
-1. Bullet Train (2022)
+<div>
+  <img src="./assets/movie-1-bullet-train.svg" width="900" />
+  <br/><br/>
+  <img src="./assets/movie-2-nice-guys.svg" width="900" />
+  <br/><br/>
+  <img src="./assets/movie-3-mr-fox.svg" width="900" />
+  <br/><br/>
+  <img src="./assets/movie-4-running-scared.svg" width="900" />
+  <br/><br/>
+  <img src="./assets/movie-5-grand-budapest.svg" width="900" />
+</div>
 
-2. Running Scared (1986)
-
-3. Fantastic Mr. Fox (2009)
-
-4. The Grand Budapest Hotel (2014)
 
 <br/><br/>
 <b>Contact:</b> n340028@gmail.com
