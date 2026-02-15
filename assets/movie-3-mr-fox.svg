@@ -61,7 +61,7 @@
 
     <!-- ===== Number top-left (same vibe) ===== -->
     <g filter="url(#printShadow)">
-      <text x="36" y="62"
+      <text x="200" y="62"
             font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
             font-size="44" font-weight="950"
             fill="url(#foxYellow)">
@@ -71,7 +71,7 @@
 
     <!-- ===== Year bottom-right ===== -->
     <g filter="url(#printShadow)">
-      <text x="1040" y="206" text-anchor="end"
+      <text x="900" y="206" text-anchor="end"
             font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
             font-size="40" font-weight="950"
             fill="url(#foxYellow)">
