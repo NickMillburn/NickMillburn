@@ -17,15 +17,7 @@ In my free time, I run personal servers built from repurposed Dell Optiplex mach
 Outside of engineering, I enjoy learning new things and immediately putting them into practice. I’m a dog person (cats are chill though), enjoy sandbox games like Teardown and Noita, and I’m a big movie fan. Current favorites, in order:
 
 <div>
-  <img src="./assets/movie-1-bullet-train.svg" width="900" />
-  <br/><br/>
-  <img src="./assets/movie-2-nice-guys.svg" width="900" />
-  <br/><br/>
-  <img src="./assets/movie-3-mr-fox.svg" width="900" />
-  <br/><br/>
-  <img src="./assets/movie-4-running-scared.svg" width="900" />
-  <br/><br/>
-  <img src="./assets/movie-5-grand-budapest.svg" width="900" />
+ <img src="./assets/movies-master.svg" width="900" style="display:block; margin:0 auto;" />
 </div>
 
 
