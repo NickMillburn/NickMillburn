@@ -8,7 +8,8 @@
 <tr>
 <td width="70%" valign="top">
   
-## About Me
+<img src="./assets/about-me-glow.svg" alt="About Me" width="520" />
+
 I’m a Computer Science & Engineering student at the University of Iowa (since 2023) with a strong interest in systems, embedded development, and hands-on engineering. I grew up tinkering with anything I could get my hands on, which led me from mechanical and robotics interests into computer engineering, where I found my passion in software and hardware integration.
 
 In my free time, I run personal servers built from repurposed Dell Optiplex machines running Arch Linux, Windows, and headless Ubuntu setups. After taking Embedded Systems, I also began developing microcontroller projects and designing custom PCBs for IoT applications in everyday life.
