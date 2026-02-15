@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="120" viewBox="0 0 1100 120">
+  <defs>
+    <filter id="glitch">
+      <!-- Horizontal slice jitter -->
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" seed="2" result="noise">
+        <animate attributeName="seed" dur="0.25s" values="1;2;3;4;5;6;7;8" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" xChannelSelector="R" yChannelSelector="G" result="disp">
+        <animate attributeName="scale" dur="0.18s" values="2;10;3;14;2" repeatCount="indefinite"/>
+      </feDisplacementMap>
+
+      <!-- RGB split -->
+      <feColorMatrix in="disp" type="matrix"
+        values="1 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 1 0" result="R"/>
+      <feColorMatrix in="disp" type="matrix"
+        values="0 0 0 0 0
+                0 1 0 0 0
+                0 0 0 0 0
+                0 0 0 1 0" result="G"/>
+      <feColorMatrix in="disp" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 1 0 0
+                0 0 0 1 0" result="B"/>
+
+      <!-- Offset channels -->
+      <feOffset in="R" dx="-3" dy="0" result="Ro">
+        <animate attributeName="dx" dur="0.22s" values="-2;-4;-1;-5;-2" repeatCount="indefinite"/>
+      </feOffset>
+      <feOffset in="G" dx="2" dy="0" result="Go">
+        <animate attributeName="dx" dur="0.19s" values="1;3;2;4;1" repeatCount="indefinite"/>
+      </feOffset>
+      <feOffset in="B" dx="0" dy="0" result="Bo">
+        <animate attributeName="dy" dur="0.16s" values="0;1;0;2;0" repeatCount="indefinite"/>
+      </feOffset>
+
+      <!-- Combine -->
+      <feMerge>
+        <feMergeNode in="Ro"/>
+        <feMergeNode in="Go"/>
+        <feMergeNode in="Bo"/>
+      </feMerge>
+    </filter>
+
+    <!-- subtle glow -->
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.8" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base text (white-ish) -->
+  <text x="20" y="78"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+        font-size="56" font-weight="800"
+        fill="#EAF2FF"
+        opacity="0.9"
+        filter="url(#softGlow)">
+    Bullet Train (2022)
+  </text>
+
+  <!-- Glitch overlay -->
+  <g filter="url(#glitch)" opacity="0.95">
+    <text x="20" y="78"
+          font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+          font-size="56" font-weight="900"
+          fill="#EAF2FF">
+      Bullet Train (2022)
+    </text>
+  </g>
+
+  <!-- Occasional “scanline” flash -->
+  <rect x="0" y="0" width="1100" height="120" fill="none" opacity="0">
+    <animate attributeName="opacity" dur="2.8s" values="0;0;0.08;0;0;0.12;0;0" repeatCount="indefinite"/>
+  </rect>
+</svg>
