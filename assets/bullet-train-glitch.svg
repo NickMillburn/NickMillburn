@@ -62,7 +62,7 @@
         fill="#EAF2FF"
         opacity="0.9"
         filter="url(#softGlow)">
-    Bullet Train (2022)
+    1. Bullet Train (2022)
   </text>
 
   <!-- Glitch overlay -->
@@ -71,7 +71,7 @@
           font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
           font-size="56" font-weight="900"
           fill="#EAF2FF">
-      Bullet Train (2022)
+      1. Bullet Train (2022)
     </text>
   </g>
 
