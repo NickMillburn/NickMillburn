@@ -1,31 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="120" viewBox="0 0 900 120">
   <defs>
-    <!-- Base text (soft white/ice) -->
+    <!-- Base text -->
     <linearGradient id="base" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#EAF2FF" stop-opacity="0.95"/>
       <stop offset="1" stop-color="#EAF2FF" stop-opacity="0.95"/>
     </linearGradient>
 
-    <!-- Sweep (purple -> cyan highlight) -->
-    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#8B5CF6" stop-opacity="0"/>
-      <stop offset="0.46" stop-color="#8B5CF6" stop-opacity="0"/>
+    <!-- Moving glow band (userSpace so coordinates are real pixels) -->
+    <linearGradient id="sweep" gradientUnits="userSpaceOnUse" x1="-300" y1="0" x2="0" y2="0">
+      <stop offset="0"    stop-color="#22D3EE" stop-opacity="0"/>
+      <stop offset="0.40" stop-color="#8B5CF6" stop-opacity="0"/>
       <stop offset="0.50" stop-color="#22D3EE" stop-opacity="1"/>
-      <stop offset="0.54" stop-color="#A78BFA" stop-opacity="0"/>
-      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+      <stop offset="0.60" stop-color="#A78BFA" stop-opacity="0"/>
+      <stop offset="1"    stop-color="#22D3EE" stop-opacity="0"/>
+
+      <!-- Move the gradient band across the text (slower now) -->
+      <animateTransform attributeName="gradientTransform"
+                        type="translate"
+                        from="-300 0"
+                        to="1200 0"
+                        dur="4.2s"
+                        repeatCount="indefinite"/>
     </linearGradient>
 
-    <!-- Moving mask -->
-    <mask id="m">
-      <rect x="-320" y="0" width="320" height="120" fill="white">
-        <animate attributeName="x" from="-320" to="900" dur="2.4s" repeatCount="indefinite"/>
-      </rect>
-    </mask>
-
-    <!-- Glow filter (multi-layer blur) -->
+    <!-- Glow filter -->
     <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
       <feGaussianBlur stdDeviation="2.2" result="b1"/>
-      <feGaussianBlur stdDeviation="6" result="b2"/>
+      <feGaussianBlur stdDeviation="6.0" result="b2"/>
       <feMerge>
         <feMergeNode in="b2"/>
         <feMergeNode in="b1"/>
@@ -34,6 +35,7 @@
     </filter>
   </defs>
 
+  <!-- Base (soft white) -->
   <text x="20" y="78"
         font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
         font-size="56" font-weight="800"
@@ -41,12 +43,12 @@
     About Me
   </text>
 
-  <g mask="url(#m)" filter="url(#glow)">
-    <text x="20" y="78"
-          font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
-          font-size="56" font-weight="800"
-          fill="url(#sweep)">
-      About Me
-    </text>
-  </g>
+  <!-- Moving glow overlay -->
+  <text x="20" y="78"
+        font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+        font-size="56" font-weight="800"
+        fill="url(#sweep)"
+        filter="url(#glow)">
+    About Me
+  </text>
 </svg>
