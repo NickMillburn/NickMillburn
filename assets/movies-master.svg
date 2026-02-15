@@ -1,0 +1,440 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1300" viewBox="0 0 1100 1300">
+  <defs>
+    <!-- ===================== 1) BULLET TRAIN defs (bt_) ===================== -->
+    <linearGradient id="bt_neonRed" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FF2A2A"/>
+      <stop offset="0.5" stop-color="#FF3B2F"/>
+      <stop offset="1" stop-color="#FF2A2A"/>
+    </linearGradient>
+
+    <linearGradient id="bt_hot" gradientUnits="userSpaceOnUse" x1="-400" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.48" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.50" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="0.52" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        from="-400 0" to="1500 0" dur="7.5s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Widened filter bounds so glow doesn't clip / look boxed -->
+    <filter id="bt_bloom" x="-250%" y="-250%" width="600%" height="600%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="6" result="b1"/>
+      <feGaussianBlur stdDeviation="14" result="b2"/>
+      <feGaussianBlur stdDeviation="26" result="b3"/>
+      <feMerge>
+        <feMergeNode in="b3"/>
+        <feMergeNode in="b2"/>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- ===================== 2) NICE GUYS defs (ng_) ===================== -->
+    <linearGradient id="ng_beige" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#D9B86A"/>
+      <stop offset="1" stop-color="#C9A955"/>
+    </linearGradient>
+
+    <filter id="ng_grain" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="8" result="n"/>
+      <feColorMatrix in="n" type="matrix"
+        values="0 0 0 0 0.10
+                0 0 0 0 0.10
+                0 0 0 0 0.10
+                0 0 0 0.16 0" result="ng"/>
+      <feBlend in="SourceGraphic" in2="ng" mode="multiply"/>
+    </filter>
+
+    <!-- ===================== 3) MR FOX defs (fx_) ===================== -->
+    <linearGradient id="fx_foxYellow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFD54A"/>
+      <stop offset="1" stop-color="#FFC928"/>
+    </linearGradient>
+
+    <filter id="fx_printShadow" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB">
+      <feOffset dx="0" dy="3" result="o"/>
+      <feColorMatrix in="o" type="matrix"
+        values="0 0 0 0 0.40
+                0 0 0 0 0.22
+                0 0 0 0 0.05
+                0 0 0 0.55 0" result="s"/>
+      <feMerge>
+        <feMergeNode in="s"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="fx_grain" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" seed="13" result="n"/>
+      <feColorMatrix in="n" type="matrix"
+        values="0 0 0 0 0.12
+                0 0 0 0 0.09
+                0 0 0 0 0.04
+                0 0 0 0.16 0" result="ng"/>
+      <feBlend in="SourceGraphic" in2="ng" mode="multiply"/>
+    </filter>
+
+    <!-- Arc aligned to same left title start (x=60) -->
+    <path id="fx_arc" d="M 60 140 C 290 55, 610 55, 840 140" />
+
+    <!-- ===================== 4) RUNNING SCARED defs (rs_) ===================== -->
+    <linearGradient id="rs_red80s" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FF2A2A"/>
+      <stop offset="1" stop-color="#E4001B"/>
+    </linearGradient>
+
+    <filter id="rs_hardShadow" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB">
+      <feOffset dx="7" dy="7" result="o"/>
+      <feColorMatrix in="o" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0.85 0" result="s"/>
+      <feMerge>
+        <feMergeNode in="s"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="rs_grain" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" seed="5" result="n"/>
+      <feColorMatrix in="n" type="matrix"
+        values="0 0 0 0 0.10
+                0 0 0 0 0.10
+                0 0 0 0 0.10
+                0 0 0 0.18 0" result="ng"/>
+      <feBlend in="SourceGraphic" in2="ng" mode="multiply"/>
+    </filter>
+
+    <!-- ===================== 5) GRAND BUDAPEST defs (gb_) ===================== -->
+    <linearGradient id="gb_gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF1B8"/>
+      <stop offset="0.35" stop-color="#E8C96A"/>
+      <stop offset="0.7" stop-color="#C79B33"/>
+      <stop offset="1" stop-color="#FFF1B8"/>
+    </linearGradient>
+
+    <linearGradient id="gb_outline" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5A3B10"/>
+      <stop offset="1" stop-color="#2B1A06"/>
+    </linearGradient>
+
+    <filter id="gb_softShadow" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feOffset dx="0" dy="3" result="o"/>
+      <feColorMatrix in="o" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0.55 0" result="s"/>
+      <feMerge>
+        <feMergeNode in="s"/>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="gb_grain" x="-80%" y="-80%" width="260%" height="260%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="2" seed="21" result="n"/>
+      <feColorMatrix in="n" type="matrix"
+        values="0 0 0 0 0.10
+                0 0 0 0 0.09
+                0 0 0 0 0.06
+                0 0 0 0.15 0" result="ng"/>
+      <feBlend in="SourceGraphic" in2="ng" mode="multiply"/>
+    </filter>
+
+    <!-- Arc aligned to same left title start (x=60) -->
+    <path id="gb_arc" d="M 60 215 C 290 120, 610 120, 840 215" />
+  </defs>
+
+  <!-- Shared anchors:
+       number: x=28 y=62
+       title-left start: x=60
+       year: x=860 y=170 (text-anchor=end)
+  -->
+
+  <!-- ===================== ROW 1: Bullet Train (y=0) ===================== -->
+  <g transform="translate(0 0)">
+    <!-- Title baseline aligned -->
+    <g opacity="1">
+      <text x="60" y="118"
+            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+            font-size="70" font-weight="950"
+            fill="none" stroke="#FF1A1A" stroke-width="18"
+            stroke-linejoin="round" stroke-linecap="round"
+            filter="url(#bt_bloom)">
+        BULLET TRAIN
+        <animate attributeName="opacity" dur="3.2s" repeatCount="indefinite"
+                 values="1;1;0.92;1;1;0.86;1;1;0.95;1"/>
+      </text>
+
+      <text x="60" y="118"
+            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+            font-size="70" font-weight="950"
+            fill="none" stroke="url(#bt_neonRed)" stroke-width="12"
+            stroke-linejoin="round" stroke-linecap="round"
+            filter="url(#bt_bloom)">
+        BULLET TRAIN
+        <animate attributeName="opacity" dur="3.2s" repeatCount="indefinite"
+                 values="1;1;0.94;1;1;0.88;1;1;0.97;1"/>
+      </text>
+
+      <text x="60" y="118"
+            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+            font-size="70" font-weight="950"
+            fill="none" stroke="#FFD1D1" stroke-opacity="0.75" stroke-width="3.2"
+            stroke-linejoin="round" stroke-linecap="round">
+        BULLET TRAIN
+        <animate attributeName="stroke-opacity" dur="3.2s" repeatCount="indefinite"
+                 values="0.70;0.70;0.55;0.72;0.70;0.45;0.74;0.70"/>
+      </text>
+
+      <text x="60" y="118"
+            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+            font-size="70" font-weight="950"
+            fill="none" stroke="url(#bt_hot)" stroke-width="12"
+            stroke-linejoin="round" stroke-linecap="round"
+            opacity="0.85">
+        BULLET TRAIN
+      </text>
+    </g>
+
+    <!-- Number -->
+    <g opacity="1">
+      <text x="28" y="62"
+            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+            font-size="56" font-weight="950"
+            fill="none" stroke="#FF1A1A" stroke-width="12"
+            stroke-linejoin="round" stroke-linecap="round"
+            filter="url(#bt_bloom)">1.</text>
+
+      <text x="28" y="62"
+            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+            font-size="56" font-weight="950"
+            fill="none" stroke="url(#bt_neonRed)" stroke-width="8"
+            stroke-linejoin="round" stroke-linecap="round"
+            filter="url(#bt_bloom)">1.</text>
+
+      <text x="28" y="62"
+            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+            font-size="56" font-weight="950"
+            fill="none" stroke="#FFD1D1" stroke-opacity="0.75" stroke-width="2.6"
+            stroke-linejoin="round" stroke-linecap="round">1.</text>
+    </g>
+
+    <!-- Year -->
+    <g opacity="1">
+      <text x="860" y="170" text-anchor="end"
+            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+            font-size="52" font-weight="950"
+            fill="none" stroke="#FF1A1A" stroke-width="12"
+            stroke-linejoin="round" stroke-linecap="round"
+            filter="url(#bt_bloom)">(2022)</text>
+
+      <text x="860" y="170" text-anchor="end"
+            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+            font-size="52" font-weight="950"
+            fill="none" stroke="url(#bt_neonRed)" stroke-width="8"
+            stroke-linejoin="round" stroke-linecap="round"
+            filter="url(#bt_bloom)">(2022)</text>
+
+      <text x="860" y="170" text-anchor="end"
+            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+            font-size="52" font-weight="950"
+            fill="none" stroke="#FFD1D1" stroke-opacity="0.75" stroke-width="2.2"
+            stroke-linejoin="round" stroke-linecap="round">(2022)</text>
+    </g>
+  </g>
+
+  <!-- ===================== ROW 2: Nice Guys (y=260) ===================== -->
+  <g transform="translate(0 260)">
+    <!-- Title baseline aligned, font-size normalized to 70 -->
+    <text x="60" y="118"
+          font-family="ui-rounded, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+          font-size="70" font-weight="900"
+          fill="none" stroke="url(#ng_beige)" stroke-width="18"
+          stroke-linejoin="round" stroke-linecap="round"
+          filter="url(#ng_grain)">the nice guys</text>
+
+    <text x="60" y="118"
+          font-family="ui-rounded, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+          font-size="70" font-weight="900"
+          fill="none" stroke="#F7F2E6" stroke-width="4.2"
+          stroke-linejoin="round" stroke-linecap="round">the nice guys</text>
+
+    <!-- Number -->
+    <text x="28" y="62"
+          font-family="ui-rounded, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+          font-size="56" font-weight="900"
+          fill="none" stroke="url(#ng_beige)" stroke-width="18"
+          stroke-linejoin="round" stroke-linecap="round"
+          filter="url(#ng_grain)">2.</text>
+
+    <text x="28" y="62"
+          font-family="ui-rounded, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+          font-size="56" font-weight="900"
+          fill="none" stroke="#F7F2E6" stroke-width="4.2"
+          stroke-linejoin="round" stroke-linecap="round">2.</text>
+
+    <!-- Year -->
+    <text x="860" y="170" text-anchor="end"
+          font-family="ui-rounded, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+          font-size="52" font-weight="900"
+          fill="none" stroke="url(#ng_beige)" stroke-width="18"
+          stroke-linejoin="round" stroke-linecap="round"
+          filter="url(#ng_grain)">(2016)</text>
+
+    <text x="860" y="170" text-anchor="end"
+          font-family="ui-rounded, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+          font-size="52" font-weight="900"
+          fill="none" stroke="#F7F2E6" stroke-width="4.0"
+          stroke-linejoin="round" stroke-linecap="round">(2016)</text>
+  </g>
+
+  <!-- ===================== ROW 3: Fantastic Mr. Fox (y=520) ===================== -->
+  <g transform="translate(0 520)" filter="url(#fx_grain)">
+    <!-- Keep the arched style, but normalize perceived size -->
+    <g filter="url(#fx_printShadow)">
+      <text font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+            font-size="70" font-weight="950"
+            fill="url(#fx_foxYellow)"
+            letter-spacing="3">
+        <textPath href="#fx_arc" startOffset="50%" text-anchor="middle">FANTASTIC</textPath>
+      </text>
+
+      <text x="60" y="118"
+            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+            font-size="70" font-weight="950"
+            fill="none" opacity="0">.</text>
+
+      <!-- Second line aligned to same left start -->
+      <text x="60" y="190"
+            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+            font-size="46" font-weight="950"
+            fill="url(#fx_foxYellow)"
+            letter-spacing="2">MR. FOX</text>
+    </g>
+
+    <!-- Number -->
+    <g filter="url(#fx_printShadow)">
+      <text x="28" y="62"
+            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+            font-size="56" font-weight="950"
+            fill="url(#fx_foxYellow)">3.</text>
+    </g>
+
+    <!-- Year -->
+    <g filter="url(#fx_printShadow)">
+      <text x="860" y="170" text-anchor="end"
+            font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial"
+            font-size="52" font-weight="950"
+            fill="url(#fx_foxYellow)">(2009)</text>
+    </g>
+  </g>
+
+  <!-- ===================== ROW 4: Running Scared (y=780) ===================== -->
+  <g transform="translate(0 780)" filter="url(#rs_grain)">
+    <!-- RUNNING aligned to left title start -->
+    <g filter="url(#rs_hardShadow)" transform="translate(60 0) skewX(-10)">
+      <text x="0" y="118"
+            font-family="'Arial Black', Arial, ui-sans-serif, system-ui, Segoe UI, Roboto"
+            font-size="70" font-weight="900"
+            fill="url(#rs_red80s)"
+            letter-spacing="1">RUNNING</text>
+    </g>
+
+    <!-- SCARED aligned under it starting at x=60 -->
+    <g filter="url(#rs_hardShadow)">
+      <text x="60" y="190" transform="rotate(-6 60 190)"
+            font-family="'Arial Black', Arial, ui-sans-serif, system-ui, Segoe UI, Roboto"
+            font-size="70" font-weight="900" fill="url(#rs_red80s)">S</text>
+
+      <text x="115" y="190" transform="rotate(4 115 190)"
+            font-family="'Arial Black', Arial, ui-sans-serif, system-ui, Segoe UI, Roboto"
+            font-size="70" font-weight="900" fill="url(#rs_red80s)">C</text>
+
+      <text x="170" y="190" transform="rotate(-3 170 190)"
+            font-family="'Arial Black', Arial, ui-sans-serif, system-ui, Segoe UI, Roboto"
+            font-size="70" font-weight="900" fill="url(#rs_red80s)">A</text>
+
+      <text x="225" y="190" transform="rotate(6 225 190)"
+            font-family="'Arial Black', Arial, ui-sans-serif, system-ui, Segoe UI, Roboto"
+            font-size="70" font-weight="900" fill="url(#rs_red80s)">R</text>
+
+      <text x="280" y="190" transform="rotate(-5 280 190)"
+            font-family="'Arial Black', Arial, ui-sans-serif, system-ui, Segoe UI, Roboto"
+            font-size="70" font-weight="900" fill="url(#rs_red80s)">E</text>
+
+      <text x="335" y="190" transform="rotate(3 335 190)"
+            font-family="'Arial Black', Arial, ui-sans-serif, system-ui, Segoe UI, Roboto"
+            font-size="70" font-weight="900" fill="url(#rs_red80s)">D</text>
+    </g>
+
+    <!-- Number -->
+    <g filter="url(#rs_hardShadow)" transform="skewX(-10)">
+      <text x="28" y="62"
+            font-family="'Arial Black', Arial, ui-sans-serif, system-ui, Segoe UI, Roboto"
+            font-size="56" font-weight="900"
+            fill="url(#rs_red80s)">4.</text>
+    </g>
+
+    <!-- Year -->
+    <g filter="url(#rs_hardShadow)" transform="skewX(-10)">
+      <text x="860" y="170" text-anchor="end"
+            font-family="'Arial Black', Arial, ui-sans-serif, system-ui, Segoe UI, Roboto"
+            font-size="52" font-weight="900"
+            fill="url(#rs_red80s)">(1986)</text>
+    </g>
+  </g>
+
+  <!-- ===================== ROW 5: Grand Budapest (y=1040) ===================== -->
+  <g transform="translate(0 1040)" filter="url(#gb_grain)">
+    <g filter="url(#gb_softShadow)">
+      <!-- Left aligned block start at x=60 -->
+      <text x="60" y="52"
+            font-family="ui-serif, Georgia, 'Times New Roman', Times"
+            font-size="26" font-weight="800"
+            fill="url(#gb_gold)" stroke="url(#gb_outline)" stroke-width="2"
+            letter-spacing="3">THE</text>
+
+      <text x="60" y="92"
+            font-family="ui-serif, Georgia, 'Times New Roman', Times"
+            font-size="44" font-weight="900"
+            fill="url(#gb_gold)" stroke="url(#gb_outline)" stroke-width="3"
+            letter-spacing="6">GRAND</text>
+
+      <text font-family="ui-serif, Georgia, 'Times New Roman', Times"
+            font-size="70" font-weight="900"
+            fill="url(#gb_gold)" stroke="url(#gb_outline)" stroke-width="4"
+            letter-spacing="4">
+        <textPath href="#gb_arc" startOffset="50%" text-anchor="middle">BUDAPEST</textPath>
+      </text>
+
+      <text x="60" y="190"
+            font-family="ui-serif, Georgia, 'Times New Roman', Times"
+            font-size="40" font-weight="900"
+            fill="url(#gb_gold)" stroke="url(#gb_outline)" stroke-width="3"
+            letter-spacing="8">HOTEL</text>
+    </g>
+
+    <!-- Number -->
+    <g filter="url(#gb_softShadow)">
+      <text x="28" y="62"
+            font-family="ui-serif, Georgia, 'Times New Roman', Times"
+            font-size="56" font-weight="900"
+            fill="url(#gb_gold)" stroke="url(#gb_outline)" stroke-width="3"
+            letter-spacing="2">5.</text>
+    </g>
+
+    <!-- Year -->
+    <g filter="url(#gb_softShadow)">
+      <text x="860" y="170" text-anchor="end"
+            font-family="ui-serif, Georgia, 'Times New Roman', Times"
+            font-size="52" font-weight="900"
+            fill="url(#gb_gold)" stroke="url(#gb_outline)" stroke-width="3"
+            letter-spacing="2">(2014)</text>
+    </g>
+  </g>
+</svg>
