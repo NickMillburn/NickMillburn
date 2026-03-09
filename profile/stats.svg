@@ -8,7 +8,7 @@
         role="img"
         aria-labelledby="descId"
       >
-        <title id="titleId">Nicholas A. Millburn's GitHub Stats, Rank: C+</title>
+        <title id="titleId">Nicholas A. Millburn's GitHub Stats, Rank: C</title>
         <desc id="descId">Total Commits  (last year) : 116, Total PRs: 2, Total Issues: 0, Contributed to (last year): 1</desc>
         <style>
           .header {
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 219.76302822206722;
+        stroke-dashoffset: 220.63569284806434;
       }
     }
   
