@@ -1,7 +1,7 @@
 # Hi, I'm Nick 👋 
 
 <!--[![Nicks's GitHub stats](https://github-readme-stats.vercel.app/api?username=NickMillburn&card_width=1000&hide_rank=true&hide=stars&show_icons=true&theme=transparent)]-->
-## Languages: C (Primary), C++,  Python, Java, VHDL(Verilog), Assembly, Typescript
+## Languages: C (Primary), C++,  Python, Java, VHDL(Verilog), Assembly(x86, AVR, ARM), Typescript
 
 <br/><br/>
 <table width="100%" style="table-layout: fixed;">
